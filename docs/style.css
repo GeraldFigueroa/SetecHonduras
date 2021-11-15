@@ -333,6 +333,12 @@ footer {
   body.disablescroll {
     overflow: hidden;
   }
+  .navbar .logo img {
+    width: 200px;
+  }
+  .contact .contactBox.loca {
+    height: 300px;
+  }
   .navbar.sticky .menu-list {
     background-color: white;
   }
@@ -365,7 +371,8 @@ footer {
   }
 
   .banner .enlaceBanner a {
-    font-size: 20px;
+    font-size: 15px;
+    padding: 5px;
   }
 
   .banner .texto h2 {
