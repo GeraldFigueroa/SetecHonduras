@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 25px 0;
+  transition: all 0.6s ease-in;
+}
+.navbar.sticky {
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+.navbar.sticky .content .logo a,
+.navbar.sticky .content .menu-list li a {
+  color: black;
+}
+
+.navbar.sticky .content .logo #sth_black {
+  display: flex;
+}
+
+.navbar.sticky .content .logo #sth_white {
+  display: none;
+}
+
+.navbar.sticky .content .menu-list li a:hover {
+  color: orange;
+}
+.navbar.sticky .content .logo a:hover {
+  color: peru;
+}
+.navbar .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo img {
+  width: 300px;
+  cursor: pointer;
+}
+
+.navbar .logo #sth_black {
+  display: none;
+}
+
+.navbar .logo #sth_white {
+  display: flex;
+}
+
+.navbar .menu-list {
+  display: inline-flex;
+}
+
+.menu-list li a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu-list li a:hover {
+  color: orange;
+}
+
+/*Banner*/
+.banner {
+  height: 100vh;
+  background-image: url(img/top_background.jpg);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: color-burn;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.banner .texto {
+  display: flex;
+  margin: 30px 40px;
+}
+.banner h2 {
+  font-size: 30px;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.banner .enlaceBanner {
+  margin: 50px 40px;
+}
+
+.banner .enlaceBanner a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background 0.5s ease-in-out;
+  border: 1px solid white;
+}
+.banner .enlaceBanner a:hover {
+  color: black;
+  background-color: white;
+}
+.banner p {
+  color: white;
+  font-size: 30px;
+}
+.nosotros {
+  padding: 20px 0;
+  background-color: #f2f3f4;
+}
+.portafolio {
+  padding: 25px 0;
+  background-color: paleturquoise;
+}
+.title {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.nosotros p,
+.portafolio p {
+  padding-top: 20px;
+  text-align: justify;
+}
+
+.icon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.icon.cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+.mi-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mi-img img {
+  max-width: 400px;
+  margin: auto;
+}
+.mi-img p {
+  margin: auto;
+}
+
+/*Mision y vision*/
+.mision,
+.vision {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.mision h2,
+.vision h2 {
+  width: 40%;
+  font-size: 35px;
+}
+
+.mision p,
+.vision p {
+  width: 60%;
+  padding: 80px;
+  font-size: 18px;
+}
+
+/*
+  Contact
+*/
+
+.contacBox {
+  margin: 30px auto;
+}
+
+.contacBox h1 {
+  margin: auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.contact .contactBox {
+  position: relative;
+  display: flex;
+  width: 370px;
+  height: 270px;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.contact .contactBox .icon {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transition: 0.5s;
+  z-index: 1;
+  color: black;
+}
+
+.contact .contactBox.mail {
+  color: white;
+  background: #d68910;
+}
+.contact .contactBox .icon.mail {
+  background: #9c640c;
+}
+
+.contact .contactBox.face {
+  color: white;
+  background: #1f618d;
+}
+.contact .contactBox .icon.face {
+  background: #4267b2;
+}
+
+.contact .contactBox.loca {
+  color: white;
+  background: #1e8449;
+}
+.contact .contactBox .icon.loca {
+  background: #145a32;
+}
+
+.contact .contactBox:hover .icon {
+  top: 20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.contact .contactBox .icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.contact .contactBox:hover .icon i {
+  font-size: 40px;
+}
+
+.contact .contactBox .info {
+  position: absolute;
+  top: 100%;
+  height: calc(100%-100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.contact .contactBox:hover .info {
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contactBox .info h3 {
+  font-size: 24px;
+}
+
+.contact .contactBox .info h3 a {
+  text-decoration: none;
+  color: wheat;
+}
+
+footer {
+  background-color: #1b1b1b;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/*MEDIA*/
+@media (max-width: 868px) {
+  .icon {
+    display: block;
+  }
+  .icon.hide {
+    display: none;
+  }
+  body.disablescroll {
+    overflow: hidden;
+  }
+  .navbar.sticky .menu-list {
+    background-color: white;
+  }
+  .navbar.sticky .icon {
+    color: black;
+  }
+  .navbar .menu-list {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    background-color: #222;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu-list.active {
+    left: 0;
+  }
+
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+
+  .navbar .menu-list li a {
+    font-size: 23px;
+  }
+
+  .banner .enlaceBanner a {
+    font-size: 20px;
+  }
+
+  .banner .texto h2 {
+    font-size: 18px;
+  }
+
+  .mision {
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .mision h2,
+  .vision h2 {
+    width: 80%;
+  }
+
+  .mision p,
+  .vision p {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .vision {
+    flex-direction: column-reverse;
+  }
+}
+
+/*Loader*/
+.loader {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  top: 50%;
+}
+
+.loader .ring {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: -30px;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  border-top: 4px solid #95a5a6;
+  animation: animate 2.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader .ring::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: #95a5a6;
+  box-shadow: 0 0 0 5px #95a5a633, 0 0 0 10px #95a5a622, 0 0 0 20px #95a5a611,
+    0 0 20px #95a5a6, 0 0 50px #95a5a6;
+}
+
+.loader .ring:nth-child(3) {
+  position: absolute;
+  top: -66.66px;
+  animation-delay: -3s;
+}
+
+.loader .ring:nth-child(2) {
+  animation-delay: -1s;
+}
